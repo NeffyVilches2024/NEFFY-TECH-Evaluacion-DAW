@@ -1,0 +1,14 @@
+{
+  "name": "neffy-tech-evaluacion-daw",
+  "version": "1.0.0",
+  "description": "Aplicación web de tienda tecnológica integrada con API REST para evaluación parcial DAW",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

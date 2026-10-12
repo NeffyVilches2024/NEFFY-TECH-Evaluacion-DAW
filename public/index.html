@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEFFY TECH: catálogo de productos y servicios tecnológicos conectado a una API REST.">
+  <title>NEFFY TECH | Tecnología para ti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <div class="topline">TECNOLOGÍA, ASESORÍA Y SOLUCIONES PARA TU DÍA A DÍA</div>
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="NEFFY TECH inicio"><span class="brand-mark">N</span><span>NEFFY<span class="brand-accent">TECH</span><small>TECH STORE</small></span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a><a href="#catalogo">Productos</a><a href="#promociones">Promociones</a><a href="#servicios">Servicios</a>
+    </nav>
+    <button class="cart-button" id="abrirCarrito" aria-label="Abrir carrito">Carrito <span id="contadorCarrito">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> TU PRÓXIMA ACTUALIZACIÓN EMPIEZA AQUÍ</div>
+        <h1>Potencia tus ideas.<br><span>Conecta con la tecnología.</span></h1>
+        <p>Encuentra periféricos, componentes y soluciones tecnológicas para estudiar, trabajar y jugar.</p>
+        <div class="hero-actions"><a class="button primary" href="#catalogo">Explorar catálogo <span>↗</span></a><a class="text-link" href="#servicios">Conoce nuestros servicios →</a></div>
+        <div class="hero-stats"><div><strong id="totalProductosHero">—</strong><span>productos disponibles</span></div><div><strong>4.9/5</strong><span>experiencia que inspira</span></div><div><strong>100%</strong><span>asesoría tecnológica</span></div></div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustración de tecnología">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="tech-card"><div class="tech-card-top"><span>NEFFY / SYSTEM</span><span class="status-dot">● ONLINE</span></div><div class="chip">N</div><div class="tech-lines"><i></i><i></i><i></i></div><div class="tech-card-bottom"><span>TECHNOLOGY<br><b>FOR EVERYONE</b></span><span class="chip-code">NT—026</span></div></div>
+        <div class="float-tag tag-one">⚡ Rendimiento</div><div class="float-tag tag-two">⌘ Innovación</div><div class="glow"></div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span class="benefit-icon">✦</span><span><b>Catálogo dinámico</b><small>Información desde la API</small></span></div>
+      <div><span class="benefit-icon">◈</span><span><b>Encuentra lo que buscas</b><small>Búsqueda y filtros</small></span></div>
+      <div><span class="benefit-icon">↗</span><span><b>Asesoría tecnológica</b><small>Servicios para tus proyectos</small></span></div>
+    </section>
+
+    <section class="section" id="catalogo">
+      <div class="section-heading"><div><div class="eyebrow">DESCUBRE TU PRÓXIMO FAVORITO</div><h2>Catálogo <span>tecnológico</span></h2><p>Productos consultados en tiempo real desde nuestra API REST.</p></div><div class="catalog-count" id="contadorResultados">Cargando productos...</div></div>
+      <div class="filters">
+        <label class="search-box"><span>⌕</span><input id="buscarProducto" type="search" placeholder="Buscar producto, marca o descripción..." aria-label="Buscar productos"><kbd>⌕</kbd></label>
+        <select id="filtroCategoria" aria-label="Filtrar por categoría"><option value="">Todas las categorías</option></select>
+        <select id="ordenarProductos" aria-label="Ordenar productos"><option value="relevancia">Orden recomendado</option><option value="menor">Precio: menor a mayor</option><option value="mayor">Precio: mayor a menor</option><option value="nombre">Nombre: A-Z</option></select>
+      </div>
+      <div class="filter-chips"><button class="chip-filter active" data-filtro="todos">Todos</button><button class="chip-filter" data-filtro="destacados">Destacados</button><span class="api-note"><span class="pulse"></span> Datos conectados a la API</span></div>
+      <div id="estadoProductos" class="state-message">Cargando catálogo desde la API...</div>
+      <div class="product-grid" id="listaProductos"></div>
+    </section>
+
+    <section class="promo-section" id="promociones"><div class="promo-intro"><div class="eyebrow">OPORTUNIDADES PARA TI</div><h2>Promociones que<br><span>conectan contigo.</span></h2><p>Consulta las campañas activas y descubre nuevas formas de equiparte.</p></div><div class="promo-grid" id="listaPromociones"><p class="state-message">Cargando promociones...</p></div></section>
+
+    <section class="section services-section" id="servicios"><div class="section-heading"><div><div class="eyebrow">MÁS QUE PRODUCTOS</div><h2>Soluciones <span>NEFFY</span></h2><p>Información de nuestros servicios obtenida desde otro recurso de la API.</p></div></div><div class="service-grid" id="listaServicios"><p class="state-message">Cargando servicios...</p></div></section>
+    <section class="cta"><div><div class="eyebrow">¿NO SABES QUÉ ELEGIR?</div><h2>Tu proyecto merece el equipo correcto.</h2><p>Revisa el catálogo y encuentra opciones según tus necesidades.</p></div><a class="button light" href="#catalogo">Ver productos ↗</a></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">N</span><span>NEFFY<span class="brand-accent">TECH</span><small>TECH STORE</small></span></a><p>Proyecto académico · Desarrollo de Aplicaciones Web</p><span>© 2026 NEFFY TECH</span></footer>
+
+  <div class="modal-backdrop" id="modalProducto" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo"><button class="modal-close" data-cerrar-modal aria-label="Cerrar">×</button><div id="contenidoModal"></div></div></div>
+  <aside class="cart-drawer" id="panelCarrito" aria-hidden="true"><div class="drawer-head"><div><div class="eyebrow">TU SELECCIÓN</div><h2>Carrito de compra</h2></div><button id="cerrarCarrito" class="modal-close" aria-label="Cerrar carrito">×</button></div><div id="itemsCarrito" class="cart-items"></div><div class="cart-total"><span>Total estimado</span><strong id="totalCarrito">S/ 0.00</strong></div><button id="vaciarCarrito" class="button outline full">Vaciar carrito</button><button id="finalizarCompra" class="button primary full">Continuar pedido ↗</button><p class="cart-disclaimer">Demostración académica: no se procesa ningún pago real.</p></aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
